@@ -1,0 +1,194 @@
+jar: /home/runner/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged-deobf/26.3/minecraft-merged-deobf-26.3.jar
+##### net.minecraft.world.level.block.PointedDripstoneBlock
+public class net.minecraft.world.level.block.PointedDripstoneBlock extends net.minecraft.world.level.block.SpeleothemBlock {
+  private static final net.minecraft.world.phys.shapes.VoxelShape REQUIRED_SPACE_TO_DRIP_THROUGH_NON_SOLID_BLOCK;
+##### net.minecraft.world.level.block.BambooStalkBlock
+public class net.minecraft.world.level.block.BambooStalkBlock extends net.minecraft.world.level.block.Block implements net.minecraft.world.level.block.BonemealableBlock {
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_SMALL;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_LARGE;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_COLLISION;
+  protected net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected net.minecraft.world.phys.shapes.VoxelShape getCollisionShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected boolean isCollisionShapeFullBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  protected net.minecraft.world.level.block.state.BlockState updateShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.world.level.ScheduledTickAccess, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+##### net.minecraft.world.level.block.state.BlockBehaviour
+public abstract class net.minecraft.world.level.block.state.BlockBehaviour implements net.minecraft.world.flag.FeatureElement {
+  protected static final net.minecraft.core.Direction[] UPDATE_SHAPE_ORDER;
+  protected final boolean dynamicShape;
+  protected void updateIndirectNeighbourShapes(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int, int);
+  protected net.minecraft.world.level.block.state.BlockState updateShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.world.level.ScheduledTickAccess, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+  protected net.minecraft.world.level.block.RenderShape getRenderShape(net.minecraft.world.level.block.state.BlockState);
+  protected boolean useShapeForLightOcclusion(net.minecraft.world.level.block.state.BlockState);
+  protected net.minecraft.world.phys.shapes.VoxelShape getOcclusionShape(net.minecraft.world.level.block.state.BlockState);
+  protected net.minecraft.world.phys.shapes.VoxelShape getBlockSupportShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  protected net.minecraft.world.phys.shapes.VoxelShape getInteractionShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  protected net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected net.minecraft.world.phys.shapes.VoxelShape getCollisionShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected net.minecraft.world.phys.shapes.VoxelShape getEntityInsideCollisionShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.entity.Entity);
+  protected boolean isCollisionShapeFullBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  protected net.minecraft.world.phys.shapes.VoxelShape getVisualShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+##### SpeleothemBlock
+Compiled from "SpeleothemBlock.java"
+public abstract class net.minecraft.world.level.block.SpeleothemBlock extends net.minecraft.world.level.block.Block implements net.minecraft.world.level.block.SimpleWaterloggedBlock,net.minecraft.world.level.block.Fallable {
+  public static final net.minecraft.world.level.block.state.properties.EnumProperty<net.minecraft.core.Direction> TIP_DIRECTION;
+  public static final net.minecraft.world.level.block.state.properties.EnumProperty<net.minecraft.world.level.block.state.properties.SpeleothemThickness> THICKNESS;
+  public static final net.minecraft.world.level.block.state.properties.BooleanProperty WATERLOGGED;
+  private static final int DELAY_BEFORE_FALLING;
+  private static final double MIN_TRIDENT_VELOCITY_TO_BREAK_SPELEOTHEM;
+  private static final float STALACTITE_DAMAGE_PER_FALL_DISTANCE_AND_SIZE;
+  private static final int STALACTITE_MAX_DAMAGE;
+  private static final int MAX_STALACTITE_HEIGHT_FOR_DAMAGE_CALCULATION;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_TIP_MERGE;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_TIP_UP;
+  protected static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_TIP_DOWN;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_FRUSTUM;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_MIDDLE;
+  private static final net.minecraft.world.phys.shapes.VoxelShape SHAPE_BASE;
+  private static final float MAX_HORIZONTAL_OFFSET;
+  private static final float AVERAGE_DAYS_PER_GROWTH;
+  private static final float GROWTH_PROBABILITY_PER_RANDOM_TICK;
+  private static final int MAX_GROWTH_LENGTH;
+  private static final int MAX_STALAGMITE_SEARCH_RANGE_WHEN_GROWING;
+  protected final net.minecraft.world.level.block.state.BlockState blockToGrowOn;
+  public net.minecraft.world.level.block.SpeleothemBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockBehaviour$Properties);
+  protected void createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition$Builder<net.minecraft.world.level.block.Block, net.minecraft.world.level.block.state.BlockState>);
+  protected boolean canSurvive(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+  protected net.minecraft.world.level.block.state.BlockState updateShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.world.level.ScheduledTickAccess, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+  public net.minecraft.world.level.block.state.BlockState getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext);
+  private net.minecraft.core.Direction calculateTipDirection(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  private net.minecraft.world.level.block.state.properties.SpeleothemThickness calculateSpeleothemThickness(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos, net.minecraft.core.Direction, boolean);
+  private boolean isValidSpeleothemPlacement(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  private static boolean isSpeleothemWithDirection(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction);
+  protected void onProjectileHit(net.minecraft.world.level.Level, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.phys.BlockHitResult, net.minecraft.world.entity.projectile.Projectile);
+  protected void tick(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  private static void spawnFallingStalactite(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos);
+  private static boolean isStalagmite(net.minecraft.world.level.block.state.BlockState);
+  protected static boolean isStalactite(net.minecraft.world.level.block.state.BlockState);
+  private static boolean isTip(net.minecraft.world.level.block.state.BlockState, boolean);
+  public void onBrokenAfterFall(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.entity.item.FallingBlockEntity);
+  protected abstract int getStalactiteLandingSound();
+  public net.minecraft.world.damagesource.DamageSource getFallDamageSource(net.minecraft.world.entity.Entity);
+  protected net.minecraft.world.level.material.FluidState getFluidState(net.minecraft.world.level.block.state.BlockState);
+  protected net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected boolean isCollisionShapeFullBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  protected float getMaxHorizontalOffset();
+  protected boolean isPathfindable(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.pathfinder.PathComputationType);
+  protected void randomTick(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  protected static boolean isStalactiteStartPos(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+  public void growStalactiteOrStalagmiteIfPossible(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  protected boolean canGrow(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+  protected static net.minecraft.core.BlockPos findTip(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int, boolean);
+  protected static java.util.Optional<net.minecraft.core.BlockPos> findBlockVertical(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.core.Direction$AxisDirection, java.util.function.BiPredicate<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>, int);
+  private boolean canTipGrow(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos);
+  private boolean isUnmergedTipWithDirection(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction);
+  private void grow(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  private void createSpeleothem(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.world.level.block.state.properties.SpeleothemThickness);
+  private void createMergedTips(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  private void growStalagmiteBelow(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos);
+  protected boolean blocksStalagmiteScan(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected static boolean isFreeHangingStalactite(net.minecraft.world.level.block.state.BlockState);
+  protected int getMaxGrowthLength();
+  private static boolean lambda$findTip$1(boolean, net.minecraft.world.level.block.state.BlockState);
+  private static boolean lambda$findTip$0(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  static {};
+}
+       88  1980-02-01 00:00   assets/minecraft/blockstates/dripstone_block.json
+     1198  1980-02-01 00:00   assets/minecraft/blockstates/pointed_dripstone.json
+       98  1980-02-01 00:00   assets/minecraft/items/dripstone_block.json
+       99  1980-02-01 00:00   assets/minecraft/items/pointed_dripstone.json
+      108  1980-02-01 00:00   assets/minecraft/models/block/dripstone_block.json
+      919  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone.json
+      131  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_down_base.json
+      134  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_down_frustum.json
+      133  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_down_middle.json
+      130  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_down_tip.json
+      136  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_down_tip_merge.json
+      129  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_up_base.json
+      132  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_up_frustum.json
+      131  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_up_middle.json
+      128  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_up_tip.json
+      134  1980-02-01 00:00   assets/minecraft/models/block/pointed_dripstone_up_tip_merge.json
+      408  1980-02-01 00:00   assets/minecraft/models/item/pointed_dripstone.json
+       49  1980-02-01 00:00   assets/minecraft/particles/dripping_dripstone_lava.json
+       49  1980-02-01 00:00   assets/minecraft/particles/dripping_dripstone_water.json
+       49  1980-02-01 00:00   assets/minecraft/particles/falling_dripstone_lava.json
+       49  1980-02-01 00:00   assets/minecraft/particles/falling_dripstone_water.json
+      185  1980-02-01 00:00   assets/minecraft/textures/block/dripstone_block.png
+      203  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_down_base.png
+      186  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_down_frustum.png
+      196  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_down_middle.png
+      150  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_down_tip.png
+      165  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_down_tip_merge.png
+      202  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_up_base.png
+      185  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_up_frustum.png
+      193  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_up_middle.png
+      149  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_up_tip.png
+      161  1980-02-01 00:00   assets/minecraft/textures/block/pointed_dripstone_up_tip_merge.png
+      154  1980-02-01 00:00   assets/minecraft/textures/item/pointed_dripstone.png
+      602  1980-02-01 00:00   data/minecraft/advancement/recipes/building_blocks/dripstone_block.json
+      342  1980-02-01 00:00   data/minecraft/loot_table/blocks/dripstone_block.json
+      346  1980-02-01 00:00   data/minecraft/loot_table/blocks/pointed_dripstone.json
+      218  1980-02-01 00:00   data/minecraft/recipe/dripstone_block.json
+       59  1980-02-01 00:00   data/minecraft/tags/block/dripstone_replaceable_blocks.json
+       85  1980-02-01 00:00   data/minecraft/tags/block/speleothems.json
+      183  1980-02-01 00:00   data/minecraft/villager_trade/mason/3/emerald_dripstone_block.json
+      172  1980-02-01 00:00   data/minecraft/villager_trade/wandering_trader/emerald_pointed_dripstone.json
+     4229  1980-02-01 00:00   data/minecraft/worldgen/biome/dripstone_caves.json
+     1049  1980-02-01 00:00   data/minecraft/worldgen/feature/dripstone_cluster.json
+      886  1980-02-01 00:00   data/minecraft/worldgen/feature/large_dripstone.json
+     2089  1980-02-01 00:00   data/minecraft/worldgen/feature/pointed_dripstone.json
+       68  1980-02-01 00:00   data/minecraft/worldgen/material_rule/overworld/biome_surface/dripstone_caves.json
+      571  1980-02-01 00:00   data/minecraft/worldgen/placed_feature/dripstone_cluster.json
+      569  1980-02-01 00:00   data/minecraft/worldgen/placed_feature/large_dripstone.json
+     1293  1980-02-01 00:00   data/minecraft/worldgen/placed_feature/pointed_dripstone.json
+     2529  1980-02-01 00:00   net/minecraft/client/particle/DripParticle$DripstoneFallAndLandParticle.class
+     2771  1980-02-01 00:00   net/minecraft/client/particle/DripParticle$DripstoneLavaFallProvider.class
+     2741  1980-02-01 00:00   net/minecraft/client/particle/DripParticle$DripstoneLavaHangProvider.class
+     2769  1980-02-01 00:00   net/minecraft/client/particle/DripParticle$DripstoneWaterFallProvider.class
+     2762  1980-02-01 00:00   net/minecraft/client/particle/DripParticle$DripstoneWaterHangProvider.class
+     2286  1980-02-01 00:00   net/minecraft/world/level/block/PointedDripstoneBlock$FluidInfo.class
+    20965  1980-02-01 00:00   net/minecraft/world/level/block/PointedDripstoneBlock.class
+    25528  1980-02-01 00:00   net/minecraft/world/level/block/SpeleothemBlock.class
+     1058  1980-02-01 00:00   net/minecraft/world/level/block/SpeleothemBlock$1.class
+     1976  1980-02-01 00:00   net/minecraft/world/level/block/state/properties/SpeleothemThickness.class
+     2336  1980-02-01 00:00   net/minecraft/world/level/levelgen/feature/LargeDripstoneFeature$WindOffsetter.class
+     5547  1980-02-01 00:00   net/minecraft/world/level/levelgen/feature/LargeDripstoneFeature$LargeDripstone.class
+    15664  1980-02-01 00:00   net/minecraft/world/level/levelgen/feature/LargeDripstoneFeature.class
+    11439  1980-02-01 00:00   net/minecraft/world/level/levelgen/feature/SpeleothemFeature.class
+     9262  1980-02-01 00:00   net/minecraft/world/level/levelgen/feature/SpeleothemUtils.class
+    20369  1980-02-01 00:00   net/minecraft/world/level/levelgen/feature/SpeleothemClusterFeature.class
+##### ServerPlayerGameMode full
+33:  public net.minecraft.server.level.ServerPlayerGameMode(net.minecraft.server.level.ServerPlayer);
+61:  public boolean changeGameModeForPlayer(net.minecraft.world.level.GameType);
+116:  protected void setGameModeForPlayer(net.minecraft.world.level.GameType, net.minecraft.world.level.GameType);
+133:  private boolean isInRangeOfGround();
+159:  public net.minecraft.world.level.GameType getGameModeForPlayer();
+165:  public net.minecraft.world.level.GameType getPreviousGameModeForPlayer();
+171:  public boolean isSurvival();
+178:  public boolean isCreative();
+185:  public void tick();
+292:  private float incrementDestroyProgress(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, int);
+331:  private void debugLogging(net.minecraft.core.BlockPos, boolean, int, java.lang.String);
+357:        38: invokeinterface #226,  3          // InterfaceMethod org/slf4j/Logger.debug:(Ljava/lang/String;[Ljava/lang/Object;)V
+360:  public void handleBlockBreakAction(net.minecraft.core.BlockPos, net.minecraft.network.protocol.game.ServerboundPlayerActionPacket$Action, net.minecraft.core.Direction, int, int);
+708:  private void abortDestroyBlock(net.minecraft.core.BlockPos, int);
+719:        19: ldc_w         #365                // String Mismatch in destroy block pos: {} {}
+723:        27: invokeinterface #367,  4          // InterfaceMethod org/slf4j/Logger.warn:(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+755:  public void destroyAndAck(net.minecraft.core.BlockPos, int, java.lang.String);
+788:  public boolean destroyBlock(net.minecraft.core.BlockPos);
+931:  public net.minecraft.world.InteractionResult useItem(net.minecraft.server.level.ServerPlayer, net.minecraft.world.level.Level, net.minecraft.world.item.ItemStack, net.minecraft.world.InteractionHand);
+1029:  public net.minecraft.world.InteractionResult useItemOn(net.minecraft.server.level.ServerPlayer, net.minecraft.world.level.Level, net.minecraft.world.item.ItemStack, net.minecraft.world.InteractionHand, net.minecraft.world.phys.BlockHitResult);
+1239:  public void setLevel(net.minecraft.server.level.ServerLevel);
+1246:  private static net.minecraft.world.item.ItemStack lambda$useItemOn$0(net.minecraft.server.level.ServerPlayer, net.minecraft.world.InteractionHand);
+1253:  private void lambda$handleBlockBreakAction$0(net.minecraft.world.item.ItemStack);
+##### ServerPlayerGameMode strings
+  public void handleBlockBreakAction(net.minecraft.core.BlockPos, net.minecraft.network.protocol.game.ServerboundPlayerActionPacket$Action, net.minecraft.core.Direction, int, int);
+       210: ldc_w         #293                // String creative destroy
+       445: ldc_w         #337                // String abort destroying since another started (client insta mine, server disagreed)
+       499: ldc_w         #343                // String actual start of destroying
+       635: ldc_w         #356                // String destroyed
+       677: ldc_w         #358                // String stopped destroying
+        19: ldc_w         #365                // String Mismatch in destroy block pos: {} {}
+        55: ldc_w         #371                // String aborted mismatched destroying
+        81: ldc_w         #373                // String aborted destroying
+  private void lambda$handleBlockBreakAction$0(net.minecraft.world.item.ItemStack);
